@@ -1,0 +1,480 @@
+:root {
+  --oran1: #fbba00;
+  --oran2: #ffcc00;
+  --green1: #23443f;
+  --green2: #274c46;
+  --green3: #aebb21;
+  --blue1: #00446a;
+}
+
+@font-face {
+  font-family: RobotoBold;
+  src: url(../fonts/Roboto-Bold.ttf);
+}
+@font-face {
+  font-family: RobotoMedium;
+  src: url(../fonts/Roboto-Medium.ttf);
+}
+@font-face {
+  font-family: RobotoItalic;
+  src: url(../fonts/Roboto-Italic.ttf);
+}
+@font-face {
+  font-family: FuturaNowHeadline;
+  src: url(../fonts/FuturaNowHeadline.ttf);
+}
+@font-face {
+  font-family: FutureTitle;
+  src: url(../fonts/FuturaNowHeadlineMedium.ttf);
+  font-size: 3.4375em;
+}
+@media (min-width: 1241px) {
+  header {
+    height: 4.2rem;
+  }
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  box-sizing: border-box;
+  top: 0 !important;
+  bottom: 0 !important;
+  margin: 0;
+  padding: 0;
+  font-family: FuturaNowHeadline;
+}
+/*----------------------Header background Color + Shadow in the bottom----------------------*/
+header {
+  background-color: var(--green2);
+  box-shadow: 0rem 10px 10px rgba(0 0 0 / 40%);
+}
+/*----------------------Navbar SetUp sizing----------------------*/
+.navbar {
+  padding: 0rem 1rem;
+  text-transform: uppercase;
+  font-family: RobotoMedium;
+  font-size: 0.9rem;
+  background-color: var(--green2);
+  z-index: 1111;
+}
+
+@media (min-width: 1241px) {
+  .navbar {
+    height: 4.2rem;
+  }
+}
+
+/*---------------Logo response---------------*/
+#meanlogo {
+  transition: 0.2s ease-in-out;
+}
+@media (min-width: 350px) and (max-width: 425px) {
+  #meanlogo {
+    height: 4.5rem;
+  }
+}
+@media (max-width: 353px) {
+  #meanlogo {
+    height: 3rem;
+  }
+}
+.navbar-collapse {
+  max-width: 100%;
+}
+/*----------------------Menu Background Color----------------------*/
+.bg-white {
+  background-color: var(--green2) !important;
+}
+/*----------------------Menu Elements's Color----------------------*/
+.navbar-light .navbar-nav .nav-link {
+  color: #ffffff;
+}
+/*----------------------Menu active Elements's Color----------------------*/
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:hover {
+  color: var(--oran1);
+}
+/*----------------------Menu Icon Color's Change---> Search for  " stroke='rgba(256, 186, 0, 1) "----------------------*/
+.navbar-light .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(256, 186, 0, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+.navbar-light .navbar-toggler {
+  border-color: transparent;
+}
+.navbar-toggler-icon {
+  height: 1.95em;
+  width: 1.95em;
+}
+/*----------------SetUP to hide menu on scrolling-----------------*/
+.smart-scroll {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+/*----------------SetUP to hide menu on scrolling-----------------*/
+
+#site-wrapper {
+  padding-top: 66px;
+  overflow: hidden;
+  margin: 0 auto;
+  position: relative;
+}
+@media (min-width: 425px) and (max-width: 1241px) {
+  #site-wrapper {
+    padding-top: 2.5rem;
+  }
+}
+@media (min-width: 353px) and (max-width: 425px) {
+  #site-wrapper {
+    padding-top: 2.2rem;
+  }
+}
+@media (max-width: 353px) {
+  #site-wrapper {
+    padding-top: 2rem;
+  }
+}
+.smart-scroll {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+  border-bottom: 0.25rem solid var(--green1);
+}
+.smart-scroll {
+  position: fixed;
+  z-index: 1030;
+}
+.scrolled-down {
+  transform: translateY(-100%);
+  transition: all 0.3s ease-in-out;
+}
+.scrolled-up {
+  transform: translateY(0);
+  transition: all 0.3s ease-in-out;
+}
+/*--------------Dropdown Menu SetUp Positioning dispkTOP then Phone/tablet-------------*/
+li .dropdown-menu {
+  margin-top: 0px;
+  border-radius: 0 0 0.25rem 0.25rem;
+  border: 0;
+  background-color: var(--green2) !important;
+}
+@media (max-width: 1241px) {
+  .dropdown-menu {
+    border: 0px;
+  }
+}
+/*----------------------Coloring Dopdown menue Elements----------------------*/
+li .dropdown-menu a {
+  font-size: 0.95rem;
+  line-height: 1.5rem;
+}
+
+/*----------------------Social icons Colore / when it active----------------------------*/
+ .SocialIcon {
+  background-color: var(--oran1);
+  transition: ease-in-out;
+}
+ .SocialIcon a i:focus,
+ .SocialIcon a i:hover {
+  color: #ffffff;
+}
+/*----------------------Social icons Size And Coloring + Responsivity----------------------------*/
+.SocialIcon a i {
+  font-size: 1.7rem;
+  padding-left: 0.2rem;
+  color: var(--green2);
+}
+/*----------------------Responsivity and Placement----------------------------*/
+@media (min-width: 1247px) {
+  .navbar-collapse {
+    line-height: 3rem;
+  }
+  .SocialIcon .nav-link {
+    height: 4.2rem;
+    line-height: 3rem;
+  }
+  .nav-item .SocialIcon {
+    margin-left: 1.5rem;
+  }
+}
+@media (min-width: 992px) {
+  .navbar .nav-link {
+    padding-top: 1rem;
+    padding-bottom: 0rem !important;
+  }
+}
+.nav-item .SocialIcon {
+  height: 4.2rem;
+}
+/*----------------------Responsivity Of Social Icons Background Color----------------------------*/
+@media (max-width: 982px) {
+  .nav-item{
+    width: 100vw !important;
+  }
+}
+@media (min-width: 982px) and (max-width: 1241px) {
+  .SocialIcon {
+  /  padding-bottom: 0.7rem !important;
+  }
+}
+/*.carousel {
+  box-shadow: 0 0 2rem rgb(0 0 0 / 40%);
+}*/
+
+#headslide:before {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  width: 100%;
+  height: 80px;
+  background: linear-gradient(to top, var(--green2), transparent);
+  z-index: 10;
+}
+/*---------------Carousel icon's Controller Cize----------------*/
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  width: 1.6em;
+  height: 1.6em;
+}
+/*---------------Carousel icon's Controller Padding Size + Placement /Center It----------------*/
+.carousel a {
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 6rem;
+  width: 3rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+/*------  place the carousel controler distance from border-------*/
+.carousel-control-next {
+  right: 1rem;
+}
+.carousel-control-prev {
+  left: 1rem;
+}
+
+/*--------------- SubTitle Background And Text Color-----------------*/
+.sub-title {
+  background-color: var(--green2);
+  color: #ffffff;
+}
+/*-----------SetUp The height Of the Pharagraphe-----------*/
+.sub-title .row {
+  position: relative;
+  height: 12.5rem;
+}
+/*---------Centering The Text------*/
+.sub-title .row h5 {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+/*---------Colored Line In The Bottom------*/
+.SubCarousel {
+  border-bottom: 0.25rem solid var(--oran1);
+}
+
+/*-------------------Sizing and Placement-----------------*/
+.our-services .carousel-inner {
+  margin: 2rem 0;
+}
+/*----------For No repeate only 3 pack
+.our-services .row {
+  flex-nowrap: nowrap;
+  flex-md-wrap-revers:;
+}*/
+.our-services h4 {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.2em;
+  padding: 1rem 0;
+}
+.carousel-inner .img-box img {
+  width: auto;
+  padding: 1rem;
+  background-image: url(/assets/img/Forme3.png);
+  background-repeat: no-repeat;
+}
+.our-services .carousel a {
+  color: var(--green1);
+  background-color: transparent;
+  font-size: 2em;
+  top: 50%;
+  transform: translateY(-50%);
+}
+/*----------------Card--------------è-*/
+.card-columns {
+  padding: 3rem 0;
+}
+/*-----------------Make Card responsive---------------*/
+@media (min-width: 576px) and (max-width: 768px) {
+  .card-columns {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    -webkit-column-gap: 1.25rem;
+    -moz-column-gap: 1.25rem;
+    column-gap: 1.25rem;
+  }
+}
+.card {
+  transition: ease-in-out 0.4s;
+}
+.card:hover {
+  transform: translateZ(-0.5rem);
+  box-shadow: 0 0 2rem rgb(0 0 0 / 40%);
+}
+.card-body {
+  padding: 0px;
+  background-color: var(--green2);
+  color: #ffffff;
+  box-shadow: 0 0 2rem rgb(0 0 0 / 40%);
+}
+.card .card-body {
+  position: relative;
+}
+.card .card-body img {
+  position: relative;
+  padding: 0px;
+  background-size: cover;
+}
+.card .card-body h6 {
+  z-index: 110;
+  position: absolute;
+  padding: 0.4rem 0.6rem;
+  top: 0;
+  left: 0;
+  background-color: var(--green1);
+}
+.card .card-body h3,
+.card .card-body p {
+  overflow: hidden;
+  padding: 1rem;
+  margin-bottom: 0rem;
+  background-color: var(--green2);
+}
+.card .card-body p {
+  position: relative;
+}
+/*-----------Footer-------------*/
+footer {
+  margin: 0;
+  padding: 0;
+  background-color: var(--green2);
+  border-bottom: 0.25rem solid var(--green1);
+  border-top: 0.25rem solid var(--green1);
+}
+footer div .ftr {
+  margin-top: 1.4rem;
+}
+footer .container h7 {
+  font-family: FutureTitle;
+  font-weight: 550;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+footer .container a {
+  text-decoration: none;
+  font-family: FuturaNowHeadline;
+  color: rgba(255, 255, 255, 0.6);
+}
+footer .container a:focus,
+footer .container a:hover {
+  color: var(--oran1);
+}
+/*-------------- Bottom --------------*/
+.bottom {
+  background-color: var(--green1);
+  box-sizing: border-box;
+  border-top: 1px solid var(--green1);
+}
+/*-------------- Bottom Placement SetUp--------------*/
+.bottom #btm {
+  position: relative;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.bottom p {
+  position: relative;
+  color: rgba(255, 255, 255, 0.6);
+  font-family: FuturaNowHeadline;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.9em;
+}
+.bottom form p {
+  color: rgb(255, 255, 255);
+  font-family: FuturaNowHeadline;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.9em;
+}
+/*--------------------------Form Color----------------*/
+.btn,
+.form-control {
+  background-color: transparent;
+}
+.btn {
+  background-color: transparent;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+}
+.btn:focus,
+.btn:hover {
+  background-color: #ffffff;
+}
+button i {
+  color: #c4c4c4;
+}
+button i:focus,
+button i:hover {
+  color: var(--green1);
+}
+
+.na{
+  background-color: var(--oran1)
+}
+
+.navicon {
+  cursor: pointer;
+  /* Styles des barres */
+}
+.navicon .bar1,.navicon .bar2,.navicon .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #fc0;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.navicon.active .bar1 {
+  transform: translate(0, 11px) rotate(-45deg)!important;
+}
+
+.navicon.active .bar2  {opacity: 0!important;}
+
+.navicon.active .bar3  {
+  transform: translate(0, -11px) rotate(45deg)!important;
+}
+
+button.navbar-toggler{
+  border-style: none!important;
+}
+
+html, body, #root, .Aboutus {
+  height: 100%;
+}
+
+main{
+  min-height: 80vh;
+}
+main .container{
+  margin-top: 6rem!important;
+}
